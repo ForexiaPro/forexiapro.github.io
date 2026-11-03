@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forexia Open Source: COT Data, Position Size, Forex Tools</title>
+<meta name="description" content="Free, open-source trading tools from Forexia Academy: COT report data and a TradingView COT indicator, a position size calculator, a currency strength meter, a trading journal and a Discord bot.">
+<link rel="canonical" href="https://forexiapro.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forexia: open-source trading tools">
+<meta property="og:description" content="COT data, a position size calculator, a currency strength meter and session clock, a trading journal and more. Free and open source.">
+<meta property="og:url" content="https://forexiapro.github.io/">
+<meta property="og:image" content="https://forexiapro.com/og-forexia.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://forexiapro.com/#org","name":"Forexia","alternateName":"Forexia Academy","url":"https://forexiapro.com/","sameAs":["https://github.com/ForexiaPro"]},
+{"@type":"WebSite","@id":"https://forexiapro.github.io/#site","url":"https://forexiapro.github.io/","name":"Forexia open source","publisher":{"@id":"https://forexiapro.com/#org"}}
+]}
+</script>
+<style>
+  :root { --ink: #08090d; --text: #11131a; --muted: #5a6070; --line: #e3e5ec; --accent: #c8102e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: #f5f5f8; }
+  a { color: var(--accent); }
+  header { background: var(--ink) radial-gradient(50% 80% at 85% 0%, rgba(200,16,46,.30), transparent 70%); color: #eceef3; padding: 56px 24px 64px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .brand { font-weight: 800; letter-spacing: .02em; color: #eceef3; text-decoration: none; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.06; letter-spacing: -.03em; margin: 28px 0 14px; }
+  .lead { font-size: 19px; color: #a9aebb; max-width: 760px; margin: 0; }
+  main { padding: 48px 24px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; min-width: 0; }
+  .card h2 { font-size: 21px; margin: 0 0 8px; }
+  .card h2 a { color: var(--text); text-decoration: none; }
+  .card p { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; }
+  .card .links { margin-top: auto; }
+  .card .links a { margin-right: 14px; font-weight: 600; font-size: 15px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; margin-bottom: 10px; align-self: flex-start; }
+  pre { background: var(--ink); color: #eceef3; padding: 14px; border-radius: 10px; font-size: 13px; overflow-x: auto; margin: 0 0 14px; }
+  .more { margin-top: 48px; }
+  .more ul { padding-left: 1.2em; }
+  .note { color: var(--muted); font-size: 15px; }
+  footer { padding: 32px 24px; color: var(--muted); font-size: 14px; text-align: center; border-top: 1px solid var(--line); }
+  footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="https://forexiapro.com/?via=github-hub">FOREXIA</a>
+  <h1>Open-source trading tools</h1>
+  <p class="lead">COT report data, a position size calculator, a currency strength meter and session clock, a trading journal, a Discord bot and a browser toolbar, from Forexia Academy. Each one works on its own, with no account and no key.</p>
+</div></header>
+<main><div class="wrap">
+  <div class="cards">
+    <div class="card">
+      <span class="tag">Data</span>
+      <h2><a href="https://github.com/ForexiaPro/cot-data">COT report data</a></h2>
+      <p>The CFTC's Commitments of Traders report for FX futures and gold as clean CSV and JSON, updated each Friday: net positions, the change on the week and net as a % of open interest. Public domain data.</p>
+      <pre>pip install forexia-cot</pre>
+      <div class="links"><a href="https://github.com/ForexiaPro/cot-data">GitHub</a><a href="https://forexiapro.com/cot-report/?via=cot-data">The COT report, explained</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">TradingView</span>
+      <h2><a href="https://github.com/ForexiaPro/tradingview-cot">COT positioning indicator</a></h2>
+      <p>Net non-commercial and commercial positions for the chart's currency or gold, in a pane.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/tradingview-cot">GitHub</a><a href="https://forexiapro.com/cot-report/?via=tv-cot">Reading the COT report</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">npm · MT5 · widget</span>
+      <h2><a href="https://github.com/ForexiaPro/position-size">Position size calculator</a></h2>
+      <p>One calculation in three forms: a library with pip values for every pair, an embeddable widget and an MT5 script that sizes from the chart's stop line.</p>
+      <pre>npm install forex-position-size</pre>
+      <div class="links"><a href="https://github.com/ForexiaPro/position-size">GitHub</a><a href="https://forexiapro.com/tradingtools?via=position-size">Trading tools</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Widgets · MT5</span>
+      <h2><a href="https://github.com/ForexiaPro/strength-sessions">Currency strength and session clock</a></h2>
+      <p>A currency strength meter and a forex market hours clock, with daylight saving handled, as website widgets and MT5 indicators.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/strength-sessions">GitHub</a><a href="https://forexiapro.com/forex-sessions/?via=strength-sessions">Forex sessions</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Chrome · Edge</span>
+      <h2><a href="https://github.com/ForexiaPro/traders-toolbar">Trader's toolbar</a></h2>
+      <p>The next central bank decision with a countdown, the session clock, this week's COT positioning per major and the latest signal chart, in your toolbar. No account, no tracking.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/traders-toolbar">GitHub</a><a href="https://forexiapro.com/tradingtools?via=chrome-toolbar">Trading tools</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Sheets · Notion · Obsidian</span>
+      <h2><a href="https://github.com/ForexiaPro/trading-journal">Trading journal template</a></h2>
+      <p>Trades, R-multiples, the session and news window of each trade, and a prop firm rules panel.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/trading-journal">GitHub</a><a href="https://forexiapro.com/courses?via=journal">Forexia courses</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">Discord</span>
+      <h2><a href="https://github.com/ForexiaPro/macro-desk">Macro Desk bot</a></h2>
+      <p>Slash commands for a trading server: <code>/rate fed</code>, <code>/next</code>, <code>/odds boe</code>, <code>/cot eur</code>, <code>/size</code>, <code>/signal eurusd</code>. Hosted, or self-host it.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/macro-desk">GitHub</a><a href="https://forexiapro.com/news-trading/?via=discord-desk">News trading</a></div>
+    </div>
+    <div class="card">
+      <span class="tag">List</span>
+      <h2><a href="https://github.com/ForexiaPro/awesome-forex">Awesome Forex</a></h2>
+      <p>A curated list of free forex data sources, libraries, charting, backtesting and education.</p>
+      <div class="links"><a href="https://github.com/ForexiaPro/awesome-forex">GitHub</a></div>
+    </div>
+  </div>
+  <section class="more">
+    <h2>On forexiapro.com</h2>
+    <ul>
+      <li><a href="https://forexiapro.com/tradingtools?via=github-hub">Trading tools</a>: sessions, position sizer, news calendar, COT positioning, currency strength</li>
+      <li>Guides: <a href="https://forexiapro.com/cot-report/?via=github-hub">the COT report</a>, <a href="https://forexiapro.com/news-trading/?via=github-hub">news trading</a>, <a href="https://forexiapro.com/forex-sessions/?via=github-hub">forex sessions</a></li>
+      <li><a href="https://forexiapro.com/courses?via=github-hub">Courses</a> and <a href="https://forexiapro.com/pro?via=github-hub">ForexiaPRO</a></li>
+    </ul>
+    <p class="note">Trading foreign exchange carries a high level of risk. These tools are for information and education, not investment advice.</p>
+  </section>
+</div></main>
+<footer>
+  <p>Part of the Forexia network: <a href="https://interestratedecision.com/">InterestRateDecision.com</a> · <a href="https://forexiapro.com/?via=github-hub">Forexia Academy</a> · <a href="https://tradingsignalbot.com/?via=github-hub">TradingSignalBot</a> · <a href="https://propsim.markets/?via=github-hub">PropSim</a> · <a href="https://github.com/dylanpersonguy/OpenCharts">OpenCharts</a></p>
+  <p><a href="https://github.com/ForexiaPro">GitHub</a></p>
+</footer>
+</body>
+</html>
